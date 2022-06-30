@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
 </head>
 
 <body>
@@ -231,13 +232,13 @@
                          $.each(this, function(name, value){
                              str1 += "<p class='field-title'>" + name + "</p>";
                             str1 += "<div class='container'>";
-                            str1 += "<div class='skills html'>" + value +"</div>";
+                            str1 += "<div class='skills " +name + "' style='width: "+ value+"; background-color: #04AA6D;'>" + value +"</div>";
                              str1 += "</div>";
                             console.log(str1);
                        
                          });
                      });
-                    
+                     console.log(str1);
                      $('#skills').html(str1);
                 }
             });
