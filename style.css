@@ -47,10 +47,6 @@ body{
     border-bottom: 1px solid #002333;
 }
 
-.image{
-    width: 100%;
-    text-align: center;
-}
 .profile img{
     width: 100%;
     border-radius: 50%;
@@ -96,23 +92,7 @@ body{
 }
 
 
-.skill-title{
-    text-transform: uppercase;
-    color: #f7f7f7;
-    font-size: 1rem;
-}
 
-.sub-title{
-    padding-top: 2rem;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    color: #f7f7f7;
-}
-
-.sub-para{
-    color: #ccc;
-    padding: .4rem 0;
-}
 
 .references-section li{
     color: #ccc;
@@ -149,15 +129,7 @@ body{
     transform: translateY(-50%);
 }
 
-.para{
-    line-height: 1.6rem;
-    color: #718096;
-    font-size: 1.1rem;
-}
 
-.sect{
-    padding-bottom: 2rem;
-}
 
 .timeline{
     display: grid;
