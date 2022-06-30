@@ -255,10 +255,13 @@ input[type=text], select, textarea {
 }
 
 .skills {
-  text-align: right;
   padding-top: 10px;
   padding-bottom: 10px;
   color: white;
+}
+.field-title{
+    color: #002333;
+
 }
 
 .html {width: 90%; background-color: #04AA6D;}
