@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,20 +17,20 @@
         <section class="left-section">
             <div class="left-content">
                 <!-- profile-->
-                    <div class="profile">
-                        <div class="image">
-                            <img src="" alt="" id="image">
-                        </div>
-                        <h2 class="name" id="name"></h2>
-                        <p class="career" id="position"></p>
+                <div class="profile">
+                    <div class="image">
+                        <img src="" alt="" id="image">
                     </div>
+                    <h2 class="name" id="name"></h2>
+                    <p class="career" id="position"></p>
+                </div>
 
                 <!-- info-->
 
                 <div class="references-section">
-                    <h3 class="main-title">Profile</h3>  
+                    <h3 class="main-title">Profile</h3>
                     <div class="contact-info">
-                        <div class="references-section">      
+                        <div class="references-section">
                             <div class="referee">
                                 <ul>
                                     <li>
@@ -38,22 +39,22 @@
                                     </li>
                                     <li>
                                         <i class="fa fa-male"></i>
-                                         <p id="male"></p>
+                                        <p id="male"></p>
                                     </li>
                                     <li>
                                         <i class="fa fa-graduation-cap"></i>
-                                         <p id="graduate"></p>
+                                        <p id="graduate"></p>
                                     </li>
-                                   
+
                                     <li>
                                         <i class="fa fa-map-marker"></i>
                                         <p id="address"></p>
                                     </li>
                                 </ul>
-                            </div>    
+                            </div>
                         </div>
-                    </div>     
-                </div>    
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -61,61 +62,39 @@
         <section class="right-section">
             <div class="right-main-content">
                 <section class="experince sect">
-                    <h2 class="right-title">Experinces</h2>
-                    <div class="timeline">
+                    <h2 class="right-title">Experiences</h2>
+                    <div class="timeline" id="timeline">
                         <div class="left-tl-content">
-                            <h5 class="tl-title">Vinh University</h5>
+
                             <p class="para">2018 - 2023</p>
                         </div>
                         <div class="right-tl-content">
                             <div class="tl-content">
-                                <h5 class="tl-title-2">Front end, Back end development</h5>
+                                <h5 class="tl-title-2"></h5>
                                 <p class="para">
-                                    Learn HTML, CSS,BOOTSTRAP,JQUERY,DATA from basic to advanced.
+
                                 </p>
                                 <br>
                                 <p class="para">
-                                    Learn JAVASCRIPT programming from basic to advanced. Learn Servlet and JDBC, JAVA basic, Framework
+
                                 </p>
-                                <br>  
+                                <br>
                             </div>
                         </div>
                     </div>
-                    <div class="timeline">
-                        <div class="left-tl-content">
-                            <h5 class="tl-title">BNK-SOLUTION</h5>
-                            <p class="para">present</p>
-                        </div>
-                        <div class="right-tl-content">
-                            <div class="tl-content">
-                                <h5 class="tl-title-2">Train fresher</h5>   
-                            </div>
-                        </div>
-                    </div>    
+
                 </section>
 
                 <!-- skill-->
                 <div>
 
                     <h1>My Skills</h1>
-                    <p> <br></p>
-                    <p>HTML/CSS</p>
-                    <div class="container">
-                    <div class="skills html">90%</div>
+                    <br>
+                    <div class="skills" id="skills">
+                        <p>JAVA</p><div class='container'><div class='skills html'>70%</div></div>
                     </div>
-                    <p>JAVA</p>
-                    <div class="container">
-                    <div class="skills css">80%</div>
-                    </div>
-                    <p>JavaScript</p>
-                    <div class="container">
-                    <div class="skills js">70%</div>
-                    </div>
-                    <p>PHP</p>
-                    <div class="container">
-                    <div class="skills php">70%</div>
-                    </div>
-                </div>     
+
+                </div>
             </div>
         </section>
 
@@ -125,7 +104,7 @@
                 <div class="contact-info">
                     <h3 class="main-title">Contact Info</h3>
                     <div class="references-section">
-                        
+
                         <div class="referee">
                             <ul>
                                 <li>
@@ -136,11 +115,11 @@
                                     <i class="fa fa-envelope-o"></i>
                                     <p id="email"></p>
                                 </li>
-                                
-                                
+
+
                             </ul>
                         </div>
-                        
+
                     </div>
                 </div>
                 <div class="container">
@@ -157,51 +136,50 @@
                         <button type="submit" id="fsubmit" name="submit" class="submit">Send</button>
 
                     </form>
-                    
+
                 </div>
             </div>
         </section>
 
-     
-       
+
+
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
-        (function($){
-            function processForm( e ){
+        (function ($) {
+            function processForm(e) {
                 $.ajax({
                     url: 'http://62b8196d03c36cb9b7c1cd68.mockapi.io/api/hr_info/',
                     dataType: 'text',
                     type: 'post',
                     contentType: 'application/x-www-form-urlencoded',
                     data: $(this).serialize(),
-                    success: function( data, textStatus, jQxhr ){
+                    success: function (data, textStatus, jQxhr) {
                         alert("Thank you for your contact!")
                         clearField();
                     },
-                    error: function( jqXhr, textStatus, errorThrown ){
-                        $('#response p').html( "Sorry! Something went wrong ");
+                    error: function (jqXhr, textStatus, errorThrown) {
+                        $('#response p').html("Sorry! Something went wrong ");
                     }
                 });
 
                 e.preventDefault();
             }
-            function clearField(){
+
+            function clearField() {
                 $('#fname').val("");
                 $('#femail').val("");
                 $('#faddress').val("");
             }
-    
-            $('#myForm').submit( processForm );
+
+            $('#myForm').submit(processForm);
         })(jQuery);
 
-         $(document).ready(function () {
+        $(document).ready(function () {
             loadData();
         });
-      
-
     </script>
-     <script>
+    <script>
         $(document).ready(function () {
             loadData();
         });
@@ -211,12 +189,12 @@
                 dataType: 'json',
                 url: "http://62b8196d03c36cb9b7c1cd68.mockapi.io/api/hoang_info/",
                 type: 'GET',
-                            
 
-                 success: function (datas) {
+
+                success: function (datas) {
                     var imagelink = datas[0].avatar;
                     console.log(imagelink)
-                    $('#image').attr('src',imagelink);
+                    $('#image').attr('src', imagelink);
                     $('#name').html(datas[0].name)
                     $('#position').html(datas[0].position)
                     $('#birthday').html(datas[0].dateofbirth)
@@ -225,27 +203,49 @@
                     $('#phone').html(datas[0].phone)
                     $('#email').html(datas[0].email)
                     $('#address').html(datas[0].address)
-                     var str = "";
-                    var tt= datas[0].experience;
-                    console.log(tt);
-                   
-                    $.each(tt, function () {                
-                       $.each(this, function(name, value){
-                            str += "<tr>";
-                            str += "<th>" + name + "</th>";
-                            str += "<td>"+ value +"</td>";
-                            str += "</tr>";
+                    var str = "";
+                    var str1 ="";
+                    var tt = datas[0].experience;
+                    var skills =datas[0].skills;
+                    
+
+                    $.each(tt, function () {
+                        $.each(this, function (name, value) {
+                            str += "<div class='left-tl-content'>";
+                            str += "<p class='para'>" + name + "</p>";
+                            str += "</div>";
+                            str += "<div class='right-tl-content'>";
+                            str += "<div class='tl-content'>";
+
+                            str += "<p class='para'>" + value + "</p>";
+                            str += "</div>";
+                            str += "</div>";
 
                         });
                     });
-  
-                   $('table').html(str);
-                    
-                 }
-                  
-                });
-            
+
+                    $('#timeline').html(str);
+
+                    //skill
+                    $.each(skills, function(){
+                        $.each(this, function(name, value){
+                            str1 += "<p>" + name + "</p>";
+                            str1 += "<div class='container'>";
+                            str1 += "<div class='skills html'>" + value +"</div>";
+                            str1 += "</div>";
+                       
+                        });
+                    });
+                    console.log(str1);
+                    $('#skills').html(str1);
+
+
+                }
+
+            });
+
         }
     </script>
 </body>
+
 </html>
